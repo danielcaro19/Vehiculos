@@ -90,12 +90,11 @@ export class automovil{
                 var _consumo = 5.05
             }
         }
-        var Consumo = _consumo
-        return Consumo
+        return _consumo
     }
 
     get Combustible(){
-        this.combustible = this.combustible - (/*tiempoA * */this.velocidad) / this._consumo
+        this.combustible = this.combustible - (tiempo * this.velocidad) / this._consumo
         if (this.combustible < 10){
            throw "Tiene que ir a repostar"
         }

@@ -1,0 +1,27 @@
+{
+  "name": "Vehiculos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielcaro19/Vehiculos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielcaro19/Vehiculos/issues"
+  },
+  "homepage": "https://github.com/danielcaro19/Vehiculos#readme",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/mongoose": "^5.7.36",
+    "mongoose": "^5.10.11"
+  }
+}
