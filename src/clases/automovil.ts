@@ -21,79 +21,78 @@ export class automovil{
     Consumo(){
         if (this.marca == "Audi"){
             if (this.afab < 1995){
-                var _consumo = 7
+                this._consumo = 7
             } else if(this.afab < 2000){
-                var _consumo = 6.84
+                this._consumo = 6.84
             } else if (this.afab < 2005){
-                var _consumo = 6.52 
+                this._consumo = 6.52 
             } else if (this.afab < 2010){
-                var _consumo = 5.4
+                this._consumo = 5.4
             } else if(this.afab < 2015){
-                var _consumo = 5.63
+                this._consumo = 5.63
             } else if(this.afab <= 2020){
-                var _consumo = 5.06
+                this._consumo = 5.06
             }
         } else if (this.marca = "BMW"){
             if (this.afab < 1995){
-                var _consumo = 8
+                this._consumo = 8
             } else if(this.afab < 2000){
-                var _consumo = 7.67
+                this._consumo = 7.67
             } else if (this.afab < 2005){
-                var _consumo = 7.53
+                this._consumo = 7.53
             } else if (this.afab < 2010){
-                var _consumo = 6.68
+                this._consumo = 6.68
             } else if(this.afab < 2015){
-                var _consumo = 6.05
+                this._consumo = 6.05
             } else if(this.afab <= 2020){
-                var _consumo = 5.78
+                this._consumo = 5.78
             }
         } else if (this.marca = "Mercedes"){
             if (this.afab < 1995){
-                var _consumo = 7.62
+                this._consumo = 7.62
             } else if(this.afab < 2000){
-                var _consumo = 6.89
+                this._consumo = 6.89
             } else if (this.afab < 2005){
-                var _consumo = 6.42
+                this._consumo = 6.42
             } else if (this.afab < 2010){
-                var _consumo = 5.86
+                this._consumo = 5.86
             } else if(this.afab < 2015){
-                var _consumo = 5.63
+                this._consumo = 5.63
             } else if(this.afab <= 2020){
-                var _consumo = 5.31
+                this._consumo = 5.31
             }
         } else if (this.marca = "Seat"){
             if (this.afab < 1995){
-                var _consumo = 6
+                this._consumo = 6
             } else if(this.afab < 2000){
-                var _consumo = 5.84
+                this._consumo = 5.84
             } else if (this.afab < 2005){
-                var _consumo = 5.52
+                this._consumo = 5.52
             } else if (this.afab < 2010){
-                var _consumo = 4.6
+                this._consumo = 4.6
             } else if(this.afab < 2015){
-                var _consumo = 4.33
+                this._consumo = 4.33
             } else if(this.afab <= 2020){
-                var _consumo = 4.06
+                this._consumo = 4.06
             }
         } else if (this.marca = "Opel"){
             if (this.afab < 1995){
-                var _consumo = 6
+                this._consumo = 6
             } else if(this.afab < 2000){
-                var _consumo = 6
+                this._consumo = 6
             } else if (this.afab < 2005){
-                var _consumo = 5.78
+                this._consumo = 5.78
             } else if (this.afab < 2010){
-                var _consumo = 5.53
+                this._consumo = 5.53
             } else if(this.afab < 2015){
-                var _consumo = 5.25
+                this._consumo = 5.25
             } else if(this.afab <= 2020){
-                var _consumo = 5.05
+                this._consumo = 5.05
             }
         }
-        return _consumo
     }
 
-    get Combustible(){
+    Combustible(tiempo:number){
         this.combustible = this.combustible - (tiempo * this.velocidad) / this._consumo
         if (this.combustible < 10){
            throw "Tiene que ir a repostar"

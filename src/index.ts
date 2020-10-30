@@ -58,7 +58,7 @@ const main = async() => {
                     let existe:boolean=false
                     let index=0
                     coches.forEach(Coche => {
-                        if (mat1 = Coche.Matricula){
+                        if (mat1 == Coche.Matricula){
                             index=coches.indexOf(Coche)
                             existe=true
                         }
@@ -72,7 +72,7 @@ const main = async() => {
                 break
             case 4:
                 if (coches.length==0){
-                    console.log('No existen automoviles creados, porfavor vaya a la opcion 1 y cree un automovil ')
+                    console.log('No existen automoviles creados, porfavor vaya a la primera opcion y cree uno ')
                 } else {
                     let ide:number
                     console.log('Por favor seleccione la matricula de un automovil para modificarlo')
@@ -82,7 +82,7 @@ const main = async() => {
                     let mat= await leerTeclado('Introduzca la matricula del vehivulo')
                     let index:number=-1
                     coches.forEach(Coche => {
-                        if(Coche.Matricula = mat){
+                        if(Coche.Matricula == mat){
                            index=coches.indexOf(Coche)
                         }
                     })
@@ -100,12 +100,12 @@ const main = async() => {
                                     if(sCoche.Arrancado){
                                         try {
                                             sCoche.Detener()
-                                            console.log('Apagando automovil')
+                                            console.log('Deteniendo motor')
                                         } catch (error) {
                                             console.log(error)
                                         }
                                     }else{
-                                        console.log('Arrancando automovil')
+                                        console.log('Arrancando motor')
                                         sCoche.Arrancar()
                                     }
                                     break
@@ -119,10 +119,10 @@ const main = async() => {
                                     }
                                     break
                                 case 4:
-                                    let tiempo:number
+                                    var tiempo:number
                                     try {
                                         tiempo=parseInt(await leerTeclado("Introduzca el tiempo en horas que lleva el automovil a la velocidad actual, para calcular el consumo"))
-                                        console.log(`El automovil ha consumido ${sCoche.Consumo} litros de gasolina`)
+                                        console.log(`El automovil ha consumido ${sCoche.Combustible(tiempo)} litros de gasolina`)
                                     } catch (error) {
                                         console.log(error)
                                     }
